@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #cbcfd4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.card {
+  background-color: white;
+  width: 320px;
+  height: 420px;
+  border-radius: 16px;
+  padding: 30px 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+}
+.card-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 이름, 사진, 역할 */
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.name {
+  font-size: 22px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+.role {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* 통계, 스킬, 버튼 */
+.card-stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  border-top: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
+}
+.stat > div {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: -5px;
+}
+.stat > span {
+  color: #bbb;
+  font-size: 12px;
+}
+
+.card-skill {
+  display: flex;
+  justify-content: center;
+  /* gap은 margin과 다르게 부모 요소에게서 선언한다 */
+  /* 좌우 여백을 제외한 좌우 요소의 간격만 조절 */
+  gap: 8px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.badge {
+  background-color: #eff2fe;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: #554edc;
+}
+.btn-follow {
+  background-color: #554edc;
+  border: none;
+  height: 45px;
+  border-radius: 10px;
+  color: white;
+  font-size: 15px;
+}
+.btn-follow:hover {
+  font-weight: bold;
+  border: 2px solid #302d6e;
+}
