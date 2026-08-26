@@ -1,0 +1,122 @@
+/* 1. 리셋 및 전역 스타일 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #141414;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 2. 컴포넌트 별 스타일 지정 */
+
+/* 헤더 */
+.navbar {
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.logo {
+  color: #d90b14;
+  font-size: 40px;
+}
+.navbar nav a {
+  text-decoration: none;
+  color: #b4b4b4;
+  margin-left: 20px;
+  font-size: 20px;
+  font-weight: 700;
+
+  transition: color 0.5s ease;
+}
+
+.navbar nav a:hover {
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* 메인 - hero */
+.hero {
+  height: 60vh;
+  display: flex;
+  align-items: flex-end;
+  padding: 60px 30px;
+  /* layer1 - linear-gradien
+          둘 이상의 색상이 경계선 없이 자연스럽게 점진적으로 변화하는 효과 */
+  /* layer2 - 실제 배경 사진
+        url - 이미지
+        center - 이미지 중앙을 중심으로 지정
+        cover - 이미지 비율을 유지한 채 화면 크기에 맞추기 */
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
+    url(https://picsum.photos/seed/netflex/1200/600) center/cover;
+}
+.hero h2 {
+  font-size: 50px;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+.hero p {
+  font-size: 18px;
+  opacity: 0.8;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+
+.btn-play,
+.btn-info {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+/* 메인 - movie-row */
+.movie-row {
+  padding: 30px;
+}
+.movie-row h2 {
+  font-size: 22px;
+}
+.movie-list {
+  display: flex;
+  /* x축 기준으로 벗어나면 가로 스크롤바 생성 */
+  /* auto : 내용이 넘칠 때만 생성
+          scroll : 내용이 없어도 스크롤 항시 생성
+          hidden : 넘치는 부분을 숨김. 스크롤 불가 */
+  overflow-x: auto;
+  overflow-y: hidden;
+  gap: 10px;
+  padding: 10px 0;
+}
+.movie-list img {
+  width: 150px;
+  flex-shrink: 0;
+  border-radius: 10px;
+
+  transition: transform 0.3s ease;
+}
+.movie-list img:hover {
+  transform: scale(1.1);
+}
+
+/* 푸터 */
+footer {
+  padding: 10px 30px;
+  opacity: 0.4;
+  letter-spacing: 1px;
+}
+
+/* 반응형 처리 */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 20px;
+  }
+}
