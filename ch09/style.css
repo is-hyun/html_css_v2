@@ -1,0 +1,194 @@
+:root {
+  --gh-black: #0d1117;
+  --gh-gray: #222c36;
+  --gh-blue: #358bd6;
+  --gh-html: #e34f26;
+  --gh-css: #1573b5;
+  --gh-js: #f7e01d;
+  --gh-border: #30363d;
+  --gh-text: #b3b8be;
+  --grass-level-0: #161c23;
+  --grass-level-1: #0e4429;
+  --grass-level-2: #3ad254;
+}
+/* 전역 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: var(--gh-black);
+  color: var(--gh-text);
+}
+/* 컴포턴트 - 헤더 */
+header {
+  background-color: var(--gh-gray);
+  border: 1px solid var(--gh-border);
+  height: 50px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.logo {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+input {
+  flex: 1;
+  max-width: 400px;
+  padding: 6px 10px;
+
+  background-color: var(--gh-black);
+  border: 1px solid var(--gh-border);
+  border-radius: 5px;
+}
+
+/* 컴포넌트 - 프로필. */
+main {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  padding: 20px;
+  gap: 30px;
+}
+.profile {
+  flex: 0 0 300px;
+}
+.profile-img {
+  border-radius: 50%;
+  width: 80%;
+  border: 1px solid var(--gh-border);
+  display: block;
+}
+.username {
+  font-size: 24px;
+  margin-top: 15px;
+  color: white;
+}
+.userid {
+  color: var(--gh-blue);
+  font-size: 16px;
+  margin-top: 4px;
+}
+.desc {
+  opacity: 0.6;
+  font-size: 14px;
+  margin: 12px 0;
+  line-height: 1.5;
+}
+.profile-info {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+.profile-info strong {
+  color: white;
+}
+.profile-info span {
+  margin: 0 6px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 10px;
+}
+.badge.html {
+  background-color: var(--gh-html);
+  color: white;
+}
+.css {
+  background-color: var(--gh-css);
+  color: white;
+}
+.js {
+  background-color: var(--gh-js);
+  color: black;
+}
+
+.main-content {
+  flex: 1;
+}
+.content-name {
+  color: white;
+  margin: 20px 0 10px;
+}
+.grass-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  margin: 15px 0;
+  max-width: 87px;
+}
+.grass {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  flex-shrink: 0s;
+}
+.level-0 {
+  background-color: var(--grass-level-0);
+}
+.level-1 {
+  background-color: var(--grass-level-1);
+}
+.level-2 {
+  background-color: var(--grass-level-2);
+}
+
+.repo-card {
+  border: 1px solid var(--gh-border);
+  padding: 16px;
+  border-radius: 5px;
+  margin-bottom: 12px;
+}
+.repo-name {
+  color: var(--gh-blue);
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+.repo-desc {
+  font-size: 16px;
+  font-style: italic;
+}
+.repo-badge {
+  color: var(--gh-text);
+  margin-top: 10px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-size: 16px;
+}
+.lang-dot {
+  font-size: 24px;
+}
+.html-dot {
+  color: var(--gh-html);
+}
+.js-dot {
+  color: var(--gh-js);
+}
+.etc {
+  margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+  .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-img {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+}
