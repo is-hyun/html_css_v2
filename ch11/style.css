@@ -37,7 +37,6 @@ body {
   align-items: center;
   gap: 10px;
 
-  /* background-color: red */
   margin: 15px 10px;
 }
 .logo-icon {
@@ -120,7 +119,6 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
-  /* color: var(--ad-sub); */
 }
 .profile-icon {
   width: 30px;
@@ -196,7 +194,6 @@ body {
   background-color: var(--ad-surface);
   border: 1px solid var(--ad-line);
   border-radius: 10px;
-  /* padding-bottom: 18px; */
 }
 .card-name {
   font-size: 15px;
@@ -206,7 +203,6 @@ body {
 }
 .order-table {
   width: 100%;
-  /* background-color: red; */
   color: var(--ad-text);
   font-size: 13px;
   font-weight: 400;
@@ -275,8 +271,6 @@ td {
   border-top-right-radius: 6px;
   border-top-left-radius: 6px;
   background-color: var(--ad-primary);
-  display: flex;
-  justify-content: center;
 }
 .bar-name {
   margin: 0 18px;
